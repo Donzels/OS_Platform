@@ -69,7 +69,7 @@ int32_t os_mutex_take_impl(osal_mutex_handle_t mutex_handle, osal_tick_type_t ti
     TX_MUTEX *handle = (TX_MUTEX *)mutex_handle;
     OSAL_CHECK_POINTER(handle);
 
-    status = tx_mutex_get(handle, (timeout));
+    status = tx_mutex_get(handle, OS_MS_TO_TICKS(timeout));
 
     if (status == TX_SUCCESS)
     {

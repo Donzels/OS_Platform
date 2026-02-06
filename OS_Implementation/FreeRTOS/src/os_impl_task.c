@@ -65,8 +65,7 @@ void os_task_delay_impl(uint32_t ticks)
 
 void os_task_delay_ms_impl(uint32_t ms)
 {
-    uint32_t ticks = (ms * configTICK_RATE_HZ) / 1000;
-    vTaskDelay(ticks);
+    vTaskDelay(OS_MS_TO_TICKS(ms));
 }
 #endif
 
