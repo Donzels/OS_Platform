@@ -3,7 +3,6 @@
 
 #include "osal_task.h"
 #include "osal_internal_globaldefs.h"
-#include "os_freertos.h"
 
 typedef struct
 {
